@@ -1,3 +1,4 @@
+
 import React from "react";
 import styles from "./styles"
 
@@ -11,6 +12,7 @@ const HomeScreen = (props) => {
 
             
             <ImageBackground
+                // @ts-ignore
                 source={require('../../../assets/images/wallpaper.jpg') }
                 style={styles.image}
                
