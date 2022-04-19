@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
      },
     totalPrice: {
         color: '#5b5b5b',
+        fontSize: 18,
         textDecoration: 'underline',
     },
 });

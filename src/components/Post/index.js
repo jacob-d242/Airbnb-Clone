@@ -3,27 +3,29 @@ import { Text, View,Image } from 'react-native';
 import styles from './styles';
 
 
-const Post = () => {
+const Post = (props) => {
+    
+    const post = props.post;
+
     return (
         <View>
             <Image
                 style={styles.image}
-                source={{ uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/2.jpg' }}
+                source={{ uri:post.image }}
             />        
             <Text style={styles.bedrooms}>
-               1 bed 1 bedroom
+               {post.bed} bed {post.bedroom} bedroom
             </Text>
             <Text style={styles.description } numberOfLines={2}>
-            "NEW lux. apartment in the center of Santa Cruz",
-            description: "NEW lux. apartment in the center of Santa Cruz Lorem Ipsum is simplyLorem Ipsum is simply dummy text",
+            {post.type} {post.title}
             </Text>
             <Text style={styles.prices}>
-                <Text style={styles.oldPrice}>$300</Text>
-                <Text style={styles.newPrice}> $350 </Text>
+                <Text style={styles.oldPrice}>$ {post.oldPrice}</Text>
+                <Text style={styles.newPrice}> $ {post.newPrice} </Text>
                     /Day
             </Text>
 
-            <Text style={styles.totalPrice}>$600</Text>
+            <Text style={styles.totalPrice}>$ {post.totalPrice}</Text>
        </View>
     );
 }
